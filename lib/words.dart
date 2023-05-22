@@ -1,4 +1,5 @@
 import 'package:asl/search_result.dart';
+import 'package:asl/word_selection.dart';
 import 'package:chaleno/chaleno.dart';
 import 'package:flutter/material.dart';
 import 'package:html/parser.dart' as parser;
@@ -77,7 +78,9 @@ class _WordsResultState extends State<WordsResult> {
                         meaning[index].substring(1, meaning[index].length - 1),
                       ),
                       children: [
-                        Text("https://www.signingsavvy.com/sign/" + link[index])
+                        WordSelected(
+                            link:
+                                "https://www.signingsavvy.com/sign/${link[index]}")
                       ],
                     ),
                   );
